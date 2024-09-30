@@ -5,6 +5,7 @@ import Sidebarlinks from '@/components/sidebarlinks'
 // import Sidebarlinks from '@/components/sidebarlinks'
 import React from 'react'
 
+
 const Layout = ({children}:{children:React.ReactNode}) => {
   return (<>
   <div className='hidden md:flex'> 
@@ -20,7 +21,9 @@ const Layout = ({children}:{children:React.ReactNode}) => {
        <Sidebarlinks/>
        </div>
       <div className='p-5 w-full'> 
-    {children}
+   
+       {children}
+          
         </div>  
     
     

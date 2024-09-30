@@ -5,7 +5,7 @@ import { StreamVideoClient, StreamVideo } from '@stream-io/video-react-sdk';
 import { useUser } from '@clerk/nextjs';
 
 
-import Loader from '@/components/Loader';
+ import Loader from '@/components/Loader';
 import { tokenProvider } from '../actions/stream.actions';
 
 const API_KEY = 'mvh2eexhx79d';
@@ -22,16 +22,16 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
     const client = new StreamVideoClient({
       apiKey: API_KEY,
       user: {
-        id: user.id,
-        name: user.username || user.id,
-        image: user.imageUrl,
+        id: user?.id,
+        name: user?.username || user?.id,
+        image: user?.imageUrl,
       },
       tokenProvider,
     });
 
     setVideoClient(client);
   }, [user, isLoaded]);
-  if (!videoClient) return <Loader />;
+   if (!videoClient) return <Loader/>;
 
   return <StreamVideo client={videoClient}>{children}</StreamVideo>;
 };

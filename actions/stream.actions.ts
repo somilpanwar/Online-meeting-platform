@@ -8,7 +8,7 @@ const STREAM_API_SECRET = "cymu79a34t8tpt8k86n2pxwjkb2k99y7zdpea7h4845dvdefm5864
 
 export const tokenProvider = async () => {
   const user = await currentUser();
-  console.log(user);
+
   if (!user) throw new Error('User is not authenticated');
   if (!STREAM_API_KEY) throw new Error('Stream API key secret is missing');
   if (!STREAM_API_SECRET) throw new Error('Stream API secret is missing');

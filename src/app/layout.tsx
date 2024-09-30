@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "@stream-io/video-react-sdk/dist/css/styles.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import StreamClientProvider from "../../Provider/StreamClientProvider";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,9 +29,9 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
         >
-          <StreamClientProvider>
+         
         {children}
-          </StreamClientProvider>
+        
       </body>
         </ClerkProvider>
     </html>
