@@ -5,6 +5,7 @@ import {
     DialogTitle,
   } from "@/components/ui/dialog"
 import { cn } from '@/lib/utils'
+import { Button } from './ui/button'
   
 interface meetingprops{
     classname:string,
@@ -27,9 +28,9 @@ const MeetingModel = ({classname,buttontext,children,handleclick,isOpen,onclose,
           
         </DialogTitle> 
             {children}
-        <button className='bg-blue-400 w-full rounded-md'onClick={handleclick}>
+        <Button className='bg-blue-400 text-xl  'onClick={handleclick}>
             {buttontext}
-        </button>
+        </Button>
        </div>
   </DialogContent>
 </Dialog>

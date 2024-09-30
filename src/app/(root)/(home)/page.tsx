@@ -2,9 +2,11 @@
 
 import Meetingcards from '@/components/Meetingcards'
 import MeetingModel from '@/components/MeetingModel';
+import { Textarea } from '@/components/ui/textarea';
 import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
+import RectDatepicker from 'react-datepicker'
 
 const Homepage = () => {
   const router = useRouter();
@@ -69,6 +71,7 @@ const Homepage = () => {
         console.error("Error creating meeting:", error);
       }
     };
+    const meetingLink = `http://localhost:3000//meeting/${callDetail?.id}`;
     
   
 
@@ -112,6 +115,56 @@ const Homepage = () => {
         />
 
     </div>
+    {!callDetail ? (
+        <MeetingModel
+          isOpen={meeting === 'isSchedulemeeting'}
+          onclose={() => setmeting(undefined)}
+          title="Create Meeting"
+          
+          handleclick={createMeeting} classname={''} buttontext={'Schedule Meeting'}        >
+          <div className="flex flex-col gap-2.5">
+            <label className="text-base font-normal leading-[22.4px] text-sky-2">
+              Add a description
+            </label>
+            <Textarea
+              className="border-none bg-[#6897ff] text-white focus-visible:ring-0 focus-visible:ring-offset-0"
+              onChange={(e) =>
+                setvalue({ ...values, description: e.target.value })
+              }
+            />
+          </div>
+          <div className="flex w-full flex-col gap-2.5">
+            <label className="text-base font-normal leading-[22.4px] text-white ">
+              Select Date and Time
+            </label>
+            <RectDatepicker
+              selected={values.dateTime}
+              onChange={(date) => setvalue({ ...values, dateTime: date! })}
+              showTimeSelect
+              timeFormat="HH:mm"
+              timeIntervals={15}
+              timeCaption="time"
+              dateFormat="MMMM d, yyyy h:mm aa"
+              className="w-full rounded bg-[#6897ff]  p-2 focus:outline-none"
+            />
+          </div>
+        </MeetingModel>
+      ) : (
+        <MeetingModel
+          isOpen={meeting === 'isSchedulemeeting'}
+          onclose={() => setmeting(undefined)}
+          buttontext="Copy Meeting Link"
+          title="Meeting Created"
+          classname="text-center"
+          handleclick={() => {
+            navigator.clipboard.writeText(meetingLink);
+           
+          }}
+         
+         
+        />
+      )}
+
     <MeetingModel
     isOpen={meeting ==='isInstantmeeting'}
     onclose={()=>setmeting(undefined)}
@@ -122,6 +175,20 @@ const Homepage = () => {
     
     
     />
+    <MeetingModel
+        isOpen={meeting === 'isJoiningmeeting'}
+        onclose={() => setmeting(undefined)}
+        title="Type the link here"
+        classname="text-center"
+        buttontext="Join Meeting"
+        handleclick={() => router.push(values.link)}
+      >
+      <input
+          placeholder="Meeting link"
+          onChange={(e) => setvalue({ ...values, link: e.target.value })}
+          className="border-none bg-blue-200 focus-visible:ring-0 focus-visible:ring-offset-0 rounded-md p-2 placeholder-white text-black"
+        />
+      </MeetingModel>
     </div>
   )
 }

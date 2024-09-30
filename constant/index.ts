@@ -5,18 +5,18 @@ export const links =[
 
     },
     {
-        route:"/contact",
-        label:"Contact"
+        route:"/Upcoming",
+        label:"Upcoming"
 
     },
     {
-        route:"/about",
-        label:"About"
+        route:"/personalroom",
+        label:"PersonalRoom"
 
     },
     {
-        route:"/cart",
-        label:"Cart"
+        route:"/previous",
+        label:"Previous"
 
     },
 ]
