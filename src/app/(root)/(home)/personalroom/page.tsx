@@ -57,7 +57,7 @@ const PersonalRoom = () => {
     router.push(`/meeting/${meetingId}?personal=true`);
   };
 
-  const meetingLink = `http://localhost:3000//meeting/${meetingId}?personal=true`;
+  const meetingLink = `https://online-meeting-platform.onrender.com//meeting/${meetingId}?personal=true`;
 
   return (
     <section className="flex size-full flex-col gap-10 text-white">
