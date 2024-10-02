@@ -17,7 +17,7 @@ import { usePathname } from 'next/navigation'
 const Mobilenav = () => {
   const pathname = usePathname();
   return (
-    <section className='flex justify-between p-5 items-center'>
+    <section className='flex bg-green-600 justify-between  p-5 items-center'>
           <Image
           src={'/icon/zoomlogo.png'}
           alt='logo'
@@ -38,7 +38,7 @@ const Mobilenav = () => {
   </SheetTrigger>
   <SheetContent className='bg-dark border-none p-0' side={'left'}>
     
-  <div className='flex gap-2  flex-col bg-blue-800 p-2  h-screen  md:hidden'>
+  <div className='flex gap-2  flex-col bg-green-600 p-2  h-screen  md:hidden'>
           <Image
           src={'/icon/zoomlogo.png'}
           alt='logo'
@@ -55,7 +55,7 @@ const Mobilenav = () => {
          <Link 
          key={id}
          href={e.route}
-         className={cn('h-10 p-2  text-white font-bold text-lg items-center text-center rounded-lg ',{'bg-blue-400':isActive})}
+         className={cn('h-10 p-2  text-white font-bold text-lg items-center text-center rounded-lg ',{'bg-green-400':isActive})}
          > 
             {e.label}
             </Link>

@@ -5,16 +5,26 @@ import MeetingModel from '@/components/MeetingModel';
 import { Textarea } from '@/components/ui/textarea';
 import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
 import { useRouter } from 'next/navigation';
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import RectDatepicker from 'react-datepicker'
+import { toast } from 'react-toastify';
 
 const Homepage = () => {
   const router = useRouter();
+  const [Datenow, setDatenow] = useState('')
+  const [Timenow, setTimenow] = useState('')
   const[meeting,setmeting]=useState<'isSchedulemeeting'|'isJoiningmeeting'|'isInstantmeeting'|undefined>()
-  const now = new Date();
-  const time=now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
-  const date = (new Intl.DateTimeFormat('en-IN',{
-    dateStyle:'full'})).format(now);
+  
+  setInterval(() => {
+    const now = new Date();
+    const time=now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+    const date = (new Intl.DateTimeFormat('en-IN',{
+      dateStyle:'full'})).format(now);
+      
+      setTimenow(time)
+      setDatenow(date)
+    },100)
+
   const [values, setvalue] = useState({
     dateTime:new Date(),
     description:'',
@@ -82,33 +92,38 @@ const Homepage = () => {
 
   return (
     <div className='text-white text-3xl size-full  flex flex-col gap-10  p-2'>
-        <div className='bg-banner bg-cover p-5 h-[200px] w-full rounded-lg'>
-            <h1 className='text-4xl font-bold flex md:text-5xl'>{time}</h1>
-           <p className='text-2xl '>{date}</p>
+        <div className='bg-banner bg-cover p-5 h-[200px] w-full rounded-lg flex flex-col gap-5'>
+            <h1 className='text-4xl font-bold flex md:text-5xl'>{Timenow}</h1>
+           <p className='text-2xl '>{Datenow}</p>
         </div>
     <div className='flex flex-wrap gap-5 justify-center md:justify-start'>
       <Meetingcards
-         classname='bg-orange-500'
+         classname='bg-green-400'
          title='New Meeting'
          des='Start a Instant Meeting'
          handleclick={()=>setmeting('isInstantmeeting')
          }
       />
       <Meetingcards
-         classname='bg-blue-500'
+         classname='bg-green-700'
          title='Join Meeting'
          des='Check out your Recording'
          handleclick={()=>setmeting('isJoiningmeeting')
          }
       />
       <Meetingcards
-        classname='bg-purple-500'
+        classname='bg-green-400'
         title='Schedule Meeting'
         des='Plan your Meeting'
-        handleclick={()=>setmeting("isSchedulemeeting")}
+        handleclick={()=>{
+          setmeting("isSchedulemeeting")
+          toast.success("Meeting Schedule",{
+            position:"top-center"
+          })
+        }}
         />
       <Meetingcards
-        classname='bg-yellow-500'
+        classname='bg-green-700'
         title='View Recording'
         des='Check out your recording'
         handleclick={()=>router.push('/recording')}
@@ -158,7 +173,9 @@ const Homepage = () => {
           classname="text-center"
           handleclick={() => {
             navigator.clipboard.writeText(meetingLink);
-           
+            toast.success("Link Copied",{
+              position:"top-center"
+            })
           }}
          
          

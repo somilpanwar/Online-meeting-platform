@@ -13,14 +13,149 @@
     --foreground: #ededed;
   }
 }
-.cl-internal-1dauvpw{
+
+ /* custom css for clerk sign-in and sign-out */
+ .cl-internal-1p733cp{
+  background-color: rgb(115, 245, 115);
+  color: white !important;
+ }
+ 
+ .cl-internal-1qyb9gr{
+  border: none;
+ }
+ .cl-internal-1tpvhd8
+{
+  color:rgb(3, 59, 3);
+}
+.cl-internal-1vbkfwh{
+  color:rgb(3, 59, 3);
+  font-size: 15px;
+}
+ .cl-internal-1dauvpw{
   display: none;
+  font-size: 50px;
+}
+.cl-internal-1qyb9gr{
+  border: none;
+  box-shadow: none;
+}
+.cl-internal-2gzuzc {
+  height: 30px;
+}
+.cl-internal-1c7fjmu {
+  color:rgb(3, 59, 3);
+  font-weight: 600;
+  font-size: 15px;
+}
+.cl-internal-1v2koqu{
+  color:blue;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+.cl-internal-4x6jej
+{
+  background: none;
+  background-color: rgb(9, 82, 9) !important;
+  color: white;
+}
+.cl-internal-kyvqj0{
+  color:white;
+  font-weight: 600;
+}
+.cl-internal-ttumny{
+    background-color: green;
+    border: none !important;
+    font-size: 15px;
+    font-weight: bolder;
+
+}
+.cl-internal-ttumny:hover{
+  background-color: rgb(77, 153, 77);
 }
 
+.callLoading {
+  position: fixed;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  --w:10ch;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  line-height: 1.4em;
+  letter-spacing: var(--w);
+  width: var(--w);
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
+  text-shadow: 
+        calc( 0*var(--w)) 0 rgba(255, 255, 255, 0.301),calc(-1*var(--w)) 0 rgba(255, 255, 255, 0.301),calc(-2*var(--w)) 0 rgba(255, 255, 255, 0.301),calc(-3*var(--w)) 0 rgba(255, 255, 255, 0.301),calc(-4*var(--w)) 0 rgba(255, 255, 255, 0.301), 
+        calc(-5*var(--w)) 0 rgba(255, 255, 255, 0.301),calc(-6*var(--w)) 0 rgba(255, 255, 255, 0.301),calc(-7*var(--w)) 0 rgba(255, 255, 255, 0.301),calc(-8*var(--w)) 0 rgba(255, 255, 255, 0.301),calc(-9*var(--w)) 0 rgba(255, 255, 255, 0.301);
+  animation: l20 2s infinite linear;
+}
+.callLoading:before {
+  content:"Calling...";
+}
+
+@keyframes l20 {
+  9.09% {text-shadow: 
+        calc( 0*var(--w)) -10px white,calc(-1*var(--w)) 0 white,calc(-2*var(--w)) 0 white,calc(-3*var(--w)) 0 white,calc(-4*var(--w)) 0 white, 
+        calc(-5*var(--w)) 0 white,calc(-6*var(--w)) 0 white,calc(-7*var(--w)) 0 white,calc(-8*var(--w)) 0 white,calc(-9*var(--w)) 0 white}
+  18.18% {text-shadow: 
+        calc( 0*var(--w)) 0 white,calc(-1*var(--w)) -10px white,calc(-2*var(--w)) 0 white,calc(-3*var(--w)) 0 white,calc(-4*var(--w)) 0 white, 
+        calc(-5*var(--w)) 0 white,calc(-6*var(--w)) 0 white,calc(-7*var(--w)) 0 white,calc(-8*var(--w)) 0 white,calc(-9*var(--w)) 0 white}
+  27.27% {text-shadow: 
+        calc( 0*var(--w)) 0 white,calc(-1*var(--w)) 0 white,calc(-2*var(--w)) -10px white,calc(-3*var(--w)) 0 white,calc(-4*var(--w)) 0 white, 
+        calc(-5*var(--w)) 0 white,calc(-6*var(--w)) 0 white,calc(-7*var(--w)) 0 white,calc(-8*var(--w)) 0 white,calc(-9*var(--w)) 0 white}
+  36.36% {text-shadow: 
+        calc( 0*var(--w)) 0 white,calc(-1*var(--w)) 0 white,calc(-2*var(--w)) 0 white,calc(-3*var(--w)) -10px white,calc(-4*var(--w)) 0 white, 
+        calc(-5*var(--w)) 0 white,calc(-6*var(--w)) 0 white,calc(-7*var(--w)) 0 white,calc(-8*var(--w)) 0 white,calc(-9*var(--w)) 0 white}
+  45.45% {text-shadow: 
+        calc( 0*var(--w)) 0 white,calc(-1*var(--w)) 0 white,calc(-2*var(--w)) 0 white,calc(-3*var(--w)) 0 white,calc(-4*var(--w)) -10px white, 
+        calc(-5*var(--w)) 0 white,calc(-6*var(--w)) 0 white,calc(-7*var(--w)) 0 white,calc(-8*var(--w)) 0 white,calc(-9*var(--w)) 0 white}
+  54.54% {text-shadow: 
+        calc( 0*var(--w)) 0 white,calc(-1*var(--w)) 0 white,calc(-2*var(--w)) 0 white,calc(-3*var(--w)) 0 white,calc(-4*var(--w)) 0 white, 
+        calc(-5*var(--w)) -10px white,calc(-6*var(--w)) 0 white,calc(-7*var(--w)) 0 white,calc(-8*var(--w)) 0 white,calc(-9*var(--w)) 0 white}
+  63.63% {text-shadow: 
+        calc( 0*var(--w)) 0 white,calc(-1*var(--w)) 0 white,calc(-2*var(--w)) 0 white,calc(-3*var(--w)) 0 white,calc(-4*var(--w)) 0 white, 
+        calc(-5*var(--w)) 0 white,calc(-6*var(--w)) -10px white,calc(-7*var(--w)) 0 white,calc(-8*var(--w)) 0 white,calc(-9*var(--w)) 0 white}
+  72.72% {text-shadow: 
+        calc( 0*var(--w)) 0 white,calc(-1*var(--w)) 0 white,calc(-2*var(--w)) 0 white,calc(-3*var(--w)) 0 white,calc(-4*var(--w)) 0 white, 
+        calc(-5*var(--w)) 0 white,calc(-6*var(--w)) 0 white,calc(-7*var(--w)) -10px white,calc(-8*var(--w)) 0 white,calc(-9*var(--w)) 0 white}
+  81.81% {text-shadow: 
+        calc( 0*var(--w)) 0 white,calc(-1*var(--w)) 0 white,calc(-2*var(--w)) 0 white,calc(-3*var(--w)) 0 white,calc(-4*var(--w)) 0 white, 
+        calc(-5*var(--w)) 0 white,calc(-6*var(--w)) 0 white,calc(-7*var(--w)) 0 white,calc(-8*var(--w)) -10px white,calc(-9*var(--w)) 0 white}
+  90.90% {text-shadow: 
+        calc( 0*var(--w)) 0 white,calc(-1*var(--w)) 0 white,calc(-2*var(--w)) 0 white,calc(-3*var(--w)) 0 white,calc(-4*var(--w)) 0 white, 
+        calc(-5*var(--w)) 0 white,calc(-6*var(--w)) 0 white,calc(-7*var(--w)) 0 white,calc(-8*var(--w)) 0 white,calc(-9*var(--w)) -10px white}
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left:50%;
+  
+  transform: translate(-50%,-50%);
+  width: 85px;
+  height: 50px;
+  --g1:conic-gradient(from  90deg at left   3px top   3px,#0000 90deg,#fff 0);
+  --g2:conic-gradient(from -90deg at bottom 3px right 3px,#0000 90deg,#fff 0);
+  background:var(--g1),var(--g1),var(--g1), var(--g2),var(--g2),var(--g2);
+  background-position: left,center,right;
+  background-repeat: no-repeat;
+  animation: l9 1s infinite;
+}
+@keyframes l9 {
+  0%   {background-size:25px 50% ,25px 50% ,25px 50%}
+  25%  {background-size:25px 100%,25px 50% ,25px 50%}
+  50%  {background-size:25px 50% ,25px 100%,25px 50%}
+  75%  {background-size:25px 50% ,25px 50% ,25px 100%}
+  100% {background-size:25px 50% ,25px 50% ,25px 50%}
+}
 
 body {
   color: var(--foreground);
-  background: rgb(3, 3, 29);
+  background: rgb(2, 44, 2);
   font-family: Arial, Helvetica, sans-serif;
 }
 

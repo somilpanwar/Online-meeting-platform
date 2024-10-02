@@ -37,11 +37,11 @@ const MeetingSetup = ({
   return (
     <div className='flex h-screen w-full flex-col items-center justify-center gap-3 text-white'>
       <h1 className='text-2xl font-bold'>Setup</h1>
-      <div className='h-[300px] w-[300px]'>
+      <div className='h-[400px] w-[300px] flex flex-col gap-5 items-center'>
 
    <VideoPreview />
         <div className='flex flex-col items-center justify-center gap-2 p-2 '>
-           <label className='flex'>
+           <label className='flex '>
                   <input type="checkbox" checked={isMicCamToggled} onChange={(e)=>setIsMicCamToggled(e.target.checked)} />
                   Join with Video and Mic 
            </label>
@@ -50,11 +50,11 @@ const MeetingSetup = ({
         onClick={()=>{
           call.join()
           setIsSetupComplete(true);
-          }}>
+        }}>
           Join Meeting
 
         </button>
-        </div>
+            </div>
       </div>
       
     </div>

@@ -5,10 +5,10 @@ const protectedRoute = createRouteMatcher([
   '/',
   '/homepage',
   '/meeting(.*)', //to mathc all the meeting routes use
-  '/cart',
-  '/about',
-  '/contact',
-  '/search',
+  '/personalroom',
+  '/upcomming',
+  '/recording',
+  '/previous',
 
 ])
 export default clerkMiddleware((auth , req)=>{

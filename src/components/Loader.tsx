@@ -1,9 +1,12 @@
+
 import React from 'react'
 
 const loader = () => {
   return (
-    <div>loading..</div>
+    <div className='loader'></div> 
   )
 }
 
 export default loader
+
+

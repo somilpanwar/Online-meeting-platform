@@ -28,13 +28,13 @@ const MeetingCard = ({
  
 
   return (
-    <section className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] border bg-blue-800 px-5 py-8 xl:max-w-[568px]">
+    <section className="flex min-h-[158px] w-full flex-col justify-between rounded-[14px] border bg-green-400 px-5 py-8 xl:max-w-[568px]">
       <article className="flex flex-col gap-5">
         {/* <Image src={icon} alt="upcoming" width={28} height={28} /> */}
-        <div className="flex justify-between">
+        <div className="flex justify-between ">
           <div className="flex flex-col gap-2">
-            <h1 className="text-2xl font-bold">{title}</h1> 
-            <p className="text-base font-normal">{date}</p>
+            <h1 className="text-2xl font-bold text-green-900">{title}</h1> 
+            <p className="text-xl font-normal">{date}</p>
           </div>
         </div>
       </article>

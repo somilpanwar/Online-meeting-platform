@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { useGetcall } from "@/../hooks/useGetcall";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { toast } from "react-toastify";
 
 
 const Table = ({
@@ -67,14 +68,18 @@ const PersonalRoom = () => {
         <Table title="Invite Link" description={meetingLink} classname={'hover:text-blue-600 hover:underline'}/>
       </div>
       <div className="flex gap-5">
-        <Button className="bg-blue-500 text-xl" onClick={startRoom}>
+        <Button className="bg-green-600 text-xl" onClick={startRoom}>
           Start Meeting
         </Button>
         <Button
-          className="bg-blue  -500 text-xl"
+          className="bg-green-700 text-xl"
           onClick={() => {
             navigator.clipboard.writeText(meetingLink);
-            
+            toast.success(
+              "Link Copied!",{
+                position:"top-right"
+              }
+            )
           }}
         >
           Copy Invitation

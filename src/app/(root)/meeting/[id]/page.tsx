@@ -16,7 +16,7 @@ const Meeting = () => {
     <>
     <main className='h-screen w-full'>
     {isCallLoading ? (
-        <div>Loading call...</div>  
+        <div className="callLoading"></div>  
       ) : (
         <StreamCall call={call}>
           <StreamTheme>
