@@ -98,21 +98,24 @@ const Homepage = () => {
         </div>
     <div className='flex flex-wrap gap-5 justify-center md:justify-start'>
       <Meetingcards
-         classname='bg-green-400'
+          icon="/icon/plus-solid.svg"
+         classname=' bordeer-2 shadow-grey  shadow-md '
          title='New Meeting'
          des='Start a Instant Meeting'
          handleclick={()=>setmeting('isInstantmeeting')
          }
       />
       <Meetingcards
-         classname='bg-green-700'
+      icon="/icon/video-solid.svg"
+         classname='shadow-grey  shadow-md'
          title='Join Meeting'
          des='Check out your Recording'
          handleclick={()=>setmeting('isJoiningmeeting')
          }
       />
       <Meetingcards
-        classname='bg-green-400'
+       icon="/icon/calendar-days-solid (1).svg"
+        classname='shadow-grey  shadow-md'
         title='Schedule Meeting'
         des='Plan your Meeting'
         handleclick={()=>{
@@ -123,7 +126,8 @@ const Homepage = () => {
         }}
         />
       <Meetingcards
-        classname='bg-green-700'
+       icon="/icon/floppy-disk-regular.svg"
+        classname='shadow-grey  shadow-md'
         title='View Recording'
         des='Check out your recording'
         handleclick={()=>router.push('/recording')}

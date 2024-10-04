@@ -21,7 +21,7 @@ const Layout = ({children}:{children:React.ReactNode}) => {
        <div className='hidden md:block'>
        <Sidebarlinks/>
        </div>
-      <div className='p-5  w-full'> 
+      <div className='p-2 w-full '> 
    
        {children}
         </div>  
