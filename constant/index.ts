@@ -8,19 +8,19 @@ export const links =[
     },
     {
         route:"/Upcoming",
-        icon:"",
+        icon:"/icon/square-caret-right-regular.svg",
         label:"Upcoming"
 
     },
     {
         route:"/personalroom",
-       icon:"",
+       icon:"/icon/user-tie-solid.svg",
         label:"PersonalRoom"
 
     },
     {
         route:"/previous",
-        icon:"",
+        icon:"/icon/book-solid.svg",
         label:"Previous"
 
     },
