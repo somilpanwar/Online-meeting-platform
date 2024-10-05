@@ -120,9 +120,9 @@ const Homepage = () => {
         des='Plan your Meeting'
         handleclick={()=>{
           setmeting("isSchedulemeeting")
-          toast.success("Meeting Schedule",{
-            position:"top-center"
-          })
+          // toast.success("Meeting Schedule",{
+          //   position:"top-center"
+          // })
         }}
         />
       <Meetingcards
@@ -140,13 +140,19 @@ const Homepage = () => {
           onclose={() => setmeting(undefined)}
           title="Create Meeting"
           
-          handleclick={createMeeting} classname={''} buttontext={'Schedule Meeting'}        >
+          handleclick={()=>{
+            createMeeting();
+            toast.success("Meeting Schedule",{
+                position:"top-center"
+              })
+
+          }} classname={''} buttontext={'Schedule Meeting'}        >
           <div className="flex flex-col gap-2.5">
             <label className="text-base font-normal leading-[22.4px] text-sky-2">
               Add a description
             </label>
             <Textarea
-              className="border-none bg-[#6897ff] text-white focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="border-none bg-[#3A506B]  text-white focus-visible:ring-0 focus-visible:ring-offset-0"
               onChange={(e) =>
                 setvalue({ ...values, description: e.target.value })
               }
