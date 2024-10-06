@@ -28,12 +28,12 @@ const MeetingCard = ({
  
 
   return (
-    <section className="flex min-h-[158px] w-full flex-col justify-between rounded-[14px] border bg-green-400 px-5 py-8 xl:max-w-[568px]">
+    <section className="flex min-h-[158px] w-full flex-col justify-between rounded-[14px] border bg-[#3A506B] px-5 py-8 xl:max-w-[568px]">
       <article className="flex flex-col gap-5">
         {/* <Image src={icon} alt="upcoming" width={28} height={28} /> */}
         <div className="flex justify-between ">
-          <div className="flex flex-col gap-2">
-            <h1 className="text-2xl font-bold text-green-900">{title}</h1> 
+          <div className="flex flex-col gap-2 text-white">
+            <h1 className="text-2xl font-bold ">{title}</h1> 
             <p className="text-xl font-normal">{date}</p>
           </div>
         </div>
@@ -57,7 +57,7 @@ const MeetingCard = ({
         </div>
         {!isPreviousMeeting && (
           <div className="flex gap-2">
-            <Button onClick={handleClick} className="rounded bg-blue-500 text-xl text-center ">
+            <Button onClick={handleClick} className="rounded text-[#3A506B] bg-white text-xl text-center ">
               {/* {buttonIcon1 && (
                 // <Image src={buttonIcon1} alt="feature" width={20} height={20} />
               )} */}
@@ -68,7 +68,7 @@ const MeetingCard = ({
                 navigator.clipboard.writeText(link);
                
               }}
-              className="bg-blue-500 text-xl text-center"
+              className="bg-white text-xl text-[#3A506B] text-center"
             >
               {/* <Image
                 src="/icons/copy.svg"

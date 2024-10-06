@@ -20,7 +20,7 @@ const MeetingModel = ({classname,buttontext,children,handleclick,isOpen,onclose,
   return (
     <Dialog open={isOpen} onOpenChange={onclose}>
   
-  <DialogContent className={cn('text-2xl bg-green-600 border-none ',classname)}>
+  <DialogContent className={cn('text-2xl bg-white border-none shadow-md shadow-grey text-[#3A506B]  ',classname)}>
        <div className="flex flex-col gap-2">
        <DialogTitle>
        
@@ -28,7 +28,7 @@ const MeetingModel = ({classname,buttontext,children,handleclick,isOpen,onclose,
           
         </DialogTitle> 
             {children}
-        <Button className='bg-green-900 text-xl  'onClick={handleclick}>
+        <Button className='bg-[#3A506B] text-xl  'onClick={handleclick}>
             {buttontext}
         </Button>
        </div>
