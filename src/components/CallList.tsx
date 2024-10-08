@@ -88,7 +88,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
             link={
               type === 'recordings'
                 ? (meeting as CallRecording).url
-                : `http://localhost:3000//meeting/${(meeting as Call).id}`
+                : `https://online-meeting-platform.onrender.com//meeting/${(meeting as Call).id}`
             }
             buttonIcon1={type === 'recordings' ? '/icons/play.svg' : undefined}
             buttonText={type === 'recordings' ? 'Play' : 'Start'}
