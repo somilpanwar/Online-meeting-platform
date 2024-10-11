@@ -16,8 +16,8 @@
 
  /* custom css for clerk sign-in and sign-out */
  .cl-internal-1p733cp{
-  background-color: rgb(115, 245, 115);
-  color: white !important;
+  background-color: #3A506B;
+  color: #F0F4F8 !important;
  }
  
  .cl-internal-1qyb9gr{
@@ -25,11 +25,17 @@
  }
  .cl-internal-1tpvhd8
 {
-  color:rgb(3, 59, 3);
+  color:#F0F4F8;
 }
 .cl-internal-1vbkfwh{
-  color:rgb(3, 59, 3);
+  color:#F0F4F8;
   font-size: 15px;
+}
+.cl-internal-2gzuzc {
+  width: 35px;
+}
+.cl-internal-1qyb9gr[data-variant="outline"] {
+  box-shadow: none;
 }
  .cl-internal-1dauvpw{
   display: none;
@@ -40,10 +46,11 @@
   box-shadow: none;
 }
 .cl-internal-2gzuzc {
-  height: 30px;
+  border: none;
+  box-shadow: none;
 }
 .cl-internal-1c7fjmu {
-  color:rgb(3, 59, 3);
+  color:#F0F4F8;  
   font-weight: 600;
   font-size: 15px;
 }
@@ -55,7 +62,7 @@
 .cl-internal-4x6jej
 {
   background: none;
-  background-color: rgb(9, 82, 9) !important;
+  background-color: #162333;
   color: white;
 }
 .cl-internal-kyvqj0{
@@ -63,14 +70,14 @@
   font-weight: 600;
 }
 .cl-internal-ttumny{
-    background-color: green;
+  background-color: #162333;
     border: none !important;
     font-size: 15px;
     font-weight: bolder;
 
 }
 .cl-internal-ttumny:hover{
-  background-color: rgb(77, 153, 77);
+  background-color: #243549;
 }
 
 .callLoading {
