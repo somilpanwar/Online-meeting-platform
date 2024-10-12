@@ -1,7 +1,7 @@
 
 "use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { links } from '../../constant'
 import { cn } from '@/lib/utils'
 import {
@@ -11,10 +11,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import Link from 'next/link'
+import { Squash as HamburgerSquash } from 'hamburger-react';
 import { usePathname } from 'next/navigation'
 
 
 const Mobilenav = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   return (
     <section className='flex bg-[#3A506B] justify-between  p-5 items-center'>
@@ -24,17 +26,10 @@ const Mobilenav = () => {
           width={40}
           height={40}
           />
-
           <div>
-          <Sheet>
-  <SheetTrigger className=''>
-    <Image
-    src={'/icon/hammenu.png'}
-    alt='menu'
-    width={32}
-    height={32}
-    className='invert'
-    />
+          <Sheet onOpenChange={setIsOpen}>
+  <SheetTrigger >
+      <HamburgerSquash toggled={isOpen} toggle={setIsOpen} />
   </SheetTrigger>
   <SheetContent className='bg-dark border-none p-0' side={'left'}>
     
@@ -67,11 +62,8 @@ const Mobilenav = () => {
     </div>
   </SheetContent>
 </Sheet>
-
           </div>
-
     </section>
   )
 }
-
 export default Mobilenav
