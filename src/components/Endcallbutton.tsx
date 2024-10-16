@@ -23,15 +23,17 @@ const EndCallButton = () => {
     localParticipant.userId === call.state.createdBy.id; //here we check wether the participant in the meeting is the owner or not 
 
   if (!isMeetingOwner) return null;
-
   const endCall = async () => {
-    await call.endCall();
-    router.push('/');
-  };
+  if(localParticipant.userId === call?.state?.createdBy?.id){
+      await call.endCall();
+      router.push('/');
+    };
+
+  }
 
   return (
     <Button onClick={endCall} className="bg-red-500">
-      End call for everyone
+      End call 
     </Button>
   );
 };
